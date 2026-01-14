@@ -244,6 +244,7 @@
         }
 
         .day-card.positive { border-left: 4px solid var(--accent-green); }
+        .day-card.negative { border-left: 4px solid var(--accent-red); }
         .day-card.neutral { border-left: 4px solid var(--accent-gold); }
         .day-card.today {
             border: 2px solid var(--accent-gold);
@@ -331,6 +332,11 @@
             background: var(--accent-green);
         }
 
+        .day-divider.loss-day {
+            background: var(--accent-red);
+            color: #fff;
+        }
+
         .day-divider.no-trades {
             background: var(--bg-secondary);
             color: var(--text-secondary);
@@ -360,15 +366,15 @@
         <div class="status-banner">
             <div class="status-item">
                 <div class="label">Validation Day</div>
-                <div class="value gold">7</div>
+                <div class="value gold">8</div>
             </div>
             <div class="status-item">
                 <div class="label">Days Remaining</div>
-                <div class="value blue">23</div>
+                <div class="value blue">22</div>
             </div>
             <div class="status-item">
                 <div class="label">Status</div>
-                <div class="value green">CRUSHING IT 🔥</div>
+                <div class="value green">STRONG 💪</div>
             </div>
             <div class="status-item">
                 <div class="label">Start Date</div>
@@ -379,33 +385,33 @@
         <div class="progress-section">
             <div class="progress-header">
                 <span>Validation Progress</span>
-                <span>23%</span>
+                <span>27%</span>
             </div>
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 23%"></div>
+                <div class="progress-fill" style="width: 27%"></div>
             </div>
         </div>
 
         <div class="metrics-grid">
             <div class="metric-card">
                 <div class="metric-label">Total Trades</div>
-                <div class="metric-value">17</div>
+                <div class="metric-value">18</div>
                 <div class="metric-target">Target: 60+</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Win Rate</div>
-                <div class="metric-value" style="color: var(--accent-green)">82.4%</div>
+                <div class="metric-value" style="color: var(--accent-green)">77.8%</div>
                 <div class="metric-target">Target: 70%+ ✓</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Expectancy</div>
-                <div class="metric-value" style="color: var(--accent-green)">+3.53R</div>
+                <div class="metric-value" style="color: var(--accent-green)">+3.28R</div>
                 <div class="metric-target">Target: +2.0R ✓</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Total R</div>
-                <div class="metric-value" style="color: var(--accent-cyan)">+60R</div>
-                <div class="metric-target">Target: +60R ✓</div>
+                <div class="metric-value" style="color: var(--accent-cyan)">+59R</div>
+                <div class="metric-target">Target: +60R</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Wins</div>
@@ -414,7 +420,7 @@
             </div>
             <div class="metric-card">
                 <div class="metric-label">Losses</div>
-                <div class="metric-value" style="color: var(--accent-red)">3</div>
+                <div class="metric-value" style="color: var(--accent-red)">4</div>
                 <div class="metric-target">—</div>
             </div>
         </div>
@@ -438,27 +444,47 @@
             </div>
             <div class="metric-card">
                 <div class="metric-label">Gross Losses</div>
-                <div class="metric-value" style="color: var(--accent-red)">-$480</div>
-                <div class="metric-target">3 losses × $160</div>
+                <div class="metric-value" style="color: var(--accent-red)">-$640</div>
+                <div class="metric-target">4 losses × $160</div>
             </div>
             <div class="metric-card" style="border: 2px solid var(--accent-gold);">
                 <div class="metric-label">Net P&L (1 NQ)</div>
-                <div class="metric-value" style="color: var(--accent-gold)">+$9,600</div>
-                <div class="metric-target">7 days (5 with trades)</div>
+                <div class="metric-value" style="color: var(--accent-gold)">+$9,440</div>
+                <div class="metric-target">8 days (6 with trades)</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Avg Per Trade Day</div>
-                <div class="metric-value" style="color: var(--accent-cyan)">$1,920</div>
-                <div class="metric-target">$9,600 ÷ 5 days</div>
+                <div class="metric-value" style="color: var(--accent-cyan)">$1,573</div>
+                <div class="metric-target">$9,440 ÷ 6 days</div>
             </div>
         </div>
 
         <h2 class="section-title">📅 Daily Summary</h2>
         <div class="daily-grid">
-            <div class="day-card positive today">
+            <div class="day-card negative today">
+                <div class="day-header">
+                    <span class="day-date">📉 Wed, Jan 14</span>
+                    <span class="day-number">Day 8 - TODAY</span>
+                </div>
+                <div class="day-stats">
+                    <div>
+                        <div class="day-stat-value" style="color: var(--accent-red)">0/1</div>
+                        <div class="day-stat-label">W/L</div>
+                    </div>
+                    <div>
+                        <div class="day-stat-value" style="color: var(--accent-red)">-1.0R</div>
+                        <div class="day-stat-label">Daily R</div>
+                    </div>
+                    <div>
+                        <div class="day-stat-value">1</div>
+                        <div class="day-stat-label">Trades</div>
+                    </div>
+                </div>
+            </div>
+            <div class="day-card positive">
                 <div class="day-header">
                     <span class="day-date">🔥 Tue, Jan 13</span>
-                    <span class="day-number">Day 7 - TODAY</span>
+                    <span class="day-number">Day 7</span>
                 </div>
                 <div class="day-stats">
                     <div>
@@ -616,9 +642,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Day 7: Jan 13 - TODAY -->
-                    <tr class="day-divider today">
-                        <td colspan="11">🔥 TUESDAY, JAN 13 — DAY 7 TODAY (3W/0L = +13.5R)</td>
+                    <!-- Day 8: Jan 14 - TODAY -->
+                    <tr class="day-divider loss-day">
+                        <td colspan="11">📉 WEDNESDAY, JAN 14 — DAY 8 TODAY (0W/1L = -1.0R)</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Jan 14</td>
+                        <td>09:30</td>
+                        <td>4/8</td>
+                        <td class="trade-short">▼ SHORT</td>
+                        <td>25,760.0</td>
+                        <td>25,768.0</td>
+                        <td>25,724.0</td>
+                        <td>25,768.0</td>
+                        <td><span class="trade-loss">LOSS</span></td>
+                        <td style="color: var(--accent-red)">-1.0R</td>
+                    </tr>
+                    
+                    <!-- Day 7: Jan 13 -->
+                    <tr class="day-divider">
+                        <td colspan="11">🔥 TUESDAY, JAN 13 — DAY 7 (3W/0L = +13.5R)</td>
                     </tr>
                     <tr>
                         <td>17</td>
@@ -667,7 +711,7 @@
                     
                     <!-- Day 5: Jan 9 -->
                     <tr class="day-divider">
-                        <td colspan="11">📅 FRIDAY, JAN 9 — DAY 5</td>
+                        <td colspan="11">📅 FRIDAY, JAN 9 — DAY 5 (2W/2L = +7.0R)</td>
                     </tr>
                     <tr>
                         <td>14</td>
@@ -724,7 +768,7 @@
                     
                     <!-- Day 4: Jan 8 -->
                     <tr class="day-divider">
-                        <td colspan="11">📅 THURSDAY, JAN 8 — DAY 4</td>
+                        <td colspan="11">📅 THURSDAY, JAN 8 — DAY 4 (5W/1L = +21.5R)</td>
                     </tr>
                     <tr>
                         <td>10</td>
@@ -807,7 +851,7 @@
                     
                     <!-- Day 3: Jan 7 -->
                     <tr class="day-divider">
-                        <td colspan="11">📅 WEDNESDAY, JAN 7 — DAY 3</td>
+                        <td colspan="11">📅 WEDNESDAY, JAN 7 — DAY 3 (3W/0L = +13.5R)</td>
                     </tr>
                     <tr>
                         <td>4</td>
@@ -851,7 +895,7 @@
                     
                     <!-- Day 2: Jan 6 -->
                     <tr class="day-divider">
-                        <td colspan="11">📅 TUESDAY, JAN 6 — DAY 2</td>
+                        <td colspan="11">📅 TUESDAY, JAN 6 — DAY 2 (1W/0L = +4.5R)</td>
                     </tr>
                     <tr>
                         <td>1</td>
@@ -906,7 +950,7 @@
         <footer class="footer">
             <p>GANN SEQUENCE 30-Day Validation | <a href="https://youtube.com/@QuadThreatAI" target="_blank">QuadThreat AI</a></p>
             <p style="margin-top: 10px; font-size: 0.8rem;">Results are tracked live and unedited. Past performance does not guarantee future results.</p>
-            <p style="margin-top: 10px;">Last Updated: Tuesday, January 13, 2026 @ 1:53 PM ET</p>
+            <p style="margin-top: 10px;">Last Updated: Wednesday, January 14, 2026 @ 3:14 PM ET</p>
         </footer>
     </div>
 </body>
